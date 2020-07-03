@@ -1,0 +1,89 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+}
+
+
+.card-row{
+    justify-content: center;
+    align-items: center;
+    background: #1F1F1F;
+    /* Shadow Card */
+    box-shadow: 0px 0px 4px rgba(5, 5, 5, 0.08);
+    border-radius: 8px;
+}
+
+.card-body{
+    width: 600px;
+}
+
+.user-img-profile{
+    border: none;
+}
+
+h3{
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+.btn-danger{
+    margin-top: 10px;
+    background-color: #E50914;
+    font-family: Avenir 85 Heavy;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 24px;
+    color: #FFFFFF;
+
+}
+
+
+.user-icon{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+.fa-icon{
+    font-size: 22px;
+    color: #E50914;
+}
+
+.user-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+p{
+    font-family: Avenir 85 Heavy;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 20px;
+    color: #FFFFFF;
+
+}
+
+span{
+    font-family: Avenir;
+    font-size: 12px;
+    line-height: 16px;
+    color: #8A8C90;
+
+}
+
+
+@media (max-width: 1000px){
+    
+    
+}

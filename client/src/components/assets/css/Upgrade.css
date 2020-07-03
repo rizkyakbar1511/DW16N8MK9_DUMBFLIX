@@ -1,0 +1,47 @@
+.card-title-upgrade {
+  font-family: Avenir;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 36px;
+  line-height: 49px;
+  color: #ffffff;
+}
+
+.card-body {
+  width: 600px;
+}
+
+.card-text-upgrade {
+  font-family: Avenir;
+  font-size: 18px;
+  line-height: 30px;
+  color: #ffffff;
+}
+
+.card-text span {
+  color: #cc040e;
+  font-size: 18px;
+}
+
+#accNumber {
+  color: rgb(28, 126, 3);
+}
+
+.upgrade-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 10px auto;
+  height: 170px;
+  width: 350px;
+}
+
+.btn-attach {
+  background-color: #ffffff;
+  color: #e50914;
+}
+
+.btn-send {
+  background-color: #e50914;
+  color: #ffffff;
+}

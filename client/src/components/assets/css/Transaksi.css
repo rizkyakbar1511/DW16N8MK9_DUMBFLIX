@@ -1,0 +1,39 @@
+.transaction-table-wrapper{
+    margin: 50px auto;
+    width: 900px;
+}
+
+.transaction-table-wrapper > h1{
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 33px;
+    color: #FFFFFF;
+    margin-bottom: 30px;
+}
+
+.transaction-table-data{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+    color: #FFFFFF;
+}
+
+.dropdown-transaction{
+    justify-content: center !important;
+}
+
+.dropdown-menu-transaction{
+    width: 0 !important;
+}
+
+.btn-transaction{
+    padding: 0;
+    font-size: 30px;
+    background-color: inherit;
+    color: #1C9CD2;
+    border: none;
+}

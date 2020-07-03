@@ -1,0 +1,64 @@
+.btn-add-episodes {
+  font-family: Avenir 85 Heavy;
+  font-size: 18px;
+  line-height: 21px;
+  color: #ffffff;
+  width: 200px;
+  background: #e50914;
+  border-radius: 5px;
+}
+
+.btn-add-episodes-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 30px;
+}
+
+.modal-dialog {
+  max-width: 700px !important;
+}
+
+.modal-all-wrapper {
+  width: auto !important;
+}
+
+.input-episode {
+  width: 702px;
+  margin-right: 10px;
+}
+
+.upload-thumbnail {
+  width: 173px;
+}
+
+.btn-modal-add {
+  float: right;
+  width: 250px !important;
+  background-color: #cc040e;
+  color: #ffffff;
+}
+
+.fa-paper-clip {
+  font-size: 30px;
+  color: #cc040e;
+  margin-left: 10px;
+}
+
+.first-wrapper {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.first-wrapper > p {
+  font-size: 20px;
+}
+
+.prepend-wrapper2 {
+  background-color: #1f1f1f;
+}
+
+.prepend-content2 {
+  background-color: #1f1f1f;
+}

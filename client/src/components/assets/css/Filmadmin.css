@@ -1,0 +1,60 @@
+.row-admin{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 30px 0;
+}
+
+.row-admin p{
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 49px;
+
+    color: #FFFFFF;
+
+    }
+.btn-add-film{
+    font-family: Avenir 85 Heavy;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 24px;
+    color: #FFFFFF;
+    width: 200px;
+    height: 40px;
+    background: #E50914;
+    border-radius: 5px;
+}
+
+.filmadmin-select-wrapper{
+    width: 800px;
+    justify-content: flex-start;
+    margin-bottom: 0 !important;
+}
+
+.filmadmin-select{
+    color: #FFFFFF;
+    background: rgba(210, 210, 210, 0.25);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.filmadmin-select > option{
+    background-color: black;
+}
+
+.dropdown-admin > button{
+    font-family: Product Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 150.2%;
+    /* or 27px */
+    border: 1px solid #FFFFFF;
+    border-radius: 5px;
+
+    color: #FFFFFF;
+}

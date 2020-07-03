@@ -1,0 +1,107 @@
+.container-addfilm {
+  width: 900px;
+}
+
+.container-newform {
+  width: 900px;
+  padding: 20px;
+}
+
+#headline-add-film {
+  font-family: Avenir;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 33px;
+  color: #ffffff;
+  margin: 20px 0;
+}
+
+.fa-paper-clip-add-film {
+  font-size: 30px;
+  background-color: black;
+  color: #cc040e;
+  margin-left: 10px;
+}
+
+.upload-thumbnail-addfilm {
+  margin-left: 10px;
+  width: 180px;
+}
+
+.dropdown-add-film {
+  background-color: rgba(210, 210, 210, 0.25);
+}
+
+.dropdown-add-film > button {
+  font-family: Product Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 150.2%;
+  /* or 27px */
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  width: 100%;
+  color: #ffffff;
+}
+
+.dropdown-menu-addfilm {
+  width: 100%;
+  text-align: center;
+}
+
+.btn-save-add-film {
+  border: none;
+  font-family: Avenir 85 Heavy;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 24px;
+  color: #ffffff;
+  width: 200px;
+  height: 40px;
+  background: #e50914;
+  border-radius: 5px;
+  float: right;
+}
+
+.btn-save-add-film:hover {
+  background-color: #ffffff;
+  color: #e50914;
+}
+
+.addfilm-select {
+  width: 100%;
+  color: #ffffff;
+  background: rgba(210, 210, 210, 0.25);
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.addfilm-select > option {
+  background-color: black;
+}
+
+.btn-form-wrapper,
+.btn-add-form-episode {
+  width: 100%;
+}
+
+.btn-add-form-episode {
+  font-size: 30px;
+  background-color: black;
+  color: #e50914;
+}
+
+.new-form-wrapper {
+  padding: 50px 0;
+}
+
+.prepend-wrapper {
+  background-color: black;
+}
+
+.prepend-content {
+  background-color: black;
+}

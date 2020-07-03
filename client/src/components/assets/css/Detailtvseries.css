@@ -1,0 +1,112 @@
+.jumbotron-player {
+  background: rgba(31, 31, 31, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 350px;
+}
+
+.main-player-wrapper {
+  width: 700px;
+  height: 350px;
+}
+
+.card-tvseries {
+  display: flex;
+  flex-direction: row;
+}
+
+.card-tvseries > img {
+  width: 200px;
+}
+
+.card-body-tvseries > h1 {
+  font-family: Product Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 150.2%;
+  color: #ffffff;
+}
+
+.card-body-tvseries .card-text {
+  font-family: Product Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 170%;
+  /* or 31px */
+
+  text-align: justify;
+
+  color: #ffffff;
+}
+
+.small-title {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 180px;
+}
+
+.small-year {
+  font-family: Product Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 150.2%;
+  /* identical to box height, or 27px */
+
+  color: #929292;
+}
+
+.small-category {
+  font-family: Product Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 150.2%;
+  /* identical to box height, or 27px */
+  width: 94px;
+  height: 30px;
+  text-align: center;
+
+  color: #929292;
+  border: 1px solid #929292;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.carousel {
+  margin-bottom: 20px;
+}
+
+.carousel-item {
+  height: 200px;
+}
+
+.carousel-text {
+  font-family: Product Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 170%;
+  /* identical to box height, or 31px */
+
+  text-align: justify;
+
+  color: #ffffff;
+}
+
+.carousel-control-next-icon {
+  font-weight: bold;
+  font-size: 35px;
+  color: #e50914;
+}
+
+.carousel-control-prev-icon {
+  font-weight: bold;
+  font-size: 35px;
+  color: #e50914;
+}

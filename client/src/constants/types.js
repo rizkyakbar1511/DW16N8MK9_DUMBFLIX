@@ -1,0 +1,10 @@
+export const REGISTER = "REGISTER";
+export const LOGIN = "LOGIN";
+export const GET_FILMS_ALL = "GET_FILMS_ALL";
+export const GET_FILMS_DETAILS = "GET_FILMS_DETAILS";
+export const ADD_FILM = "ADD_FILM";
+export const ADD_EPISODE = "ADD_EPISODE";
+export const GET_TRANSACTIONS = "GET_TRANSACTIONS";
+export const UPDATE_TRANSACTION = "UPDATE_TRANSACTION";
+export const LOADING_TRUE = "LOADING_TRUE";
+export const ERROR = "ERRROR";
