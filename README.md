@@ -9,6 +9,7 @@
 
 NB : Untuk login admin , silahkan register terlebih dahulu lalu ubah rolenya pada table user menjadi 1
 
+Screenshot : 
 
 ![SS](https://i.ibb.co/kGcD00G/Home-Guest.png)
 ![SS](https://i.ibb.co/pxC8qYZ/loggedIn.png)
