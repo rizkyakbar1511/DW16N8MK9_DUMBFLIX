@@ -8,7 +8,7 @@ exports.auth = (req, res, next) => {
   if (!token) return res.status(401).send({ message: "Access denied!" });
 
   try {
-    const verified = jwt.verify(token, process.env.SECRET_KEY);
+    const verified = jwt.verify(token, "akbar12345");
 
     req.user = verified;
     next();

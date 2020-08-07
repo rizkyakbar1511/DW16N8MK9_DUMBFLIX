@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.1
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Jul 23, 2020 at 07:21 PM
--- Server version: 10.4.8-MariaDB
--- PHP Version: 7.3.10
+-- Host: localhost
+-- Generation Time: Aug 07, 2020 at 04:15 PM
+-- Server version: 10.4.13-MariaDB
+-- PHP Version: 7.4.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -25,10 +24,10 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `categories`
+-- Table structure for table `Categories`
 --
 
-CREATE TABLE `categories` (
+CREATE TABLE `Categories` (
   `id` int(11) NOT NULL,
   `name` varchar(255) DEFAULT NULL,
   `createdAt` datetime NOT NULL,
@@ -36,20 +35,20 @@ CREATE TABLE `categories` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `categories`
+-- Dumping data for table `Categories`
 --
 
-INSERT INTO `categories` (`id`, `name`, `createdAt`, `updatedAt`) VALUES
+INSERT INTO `Categories` (`id`, `name`, `createdAt`, `updatedAt`) VALUES
 (1, 'TV Series', '2020-06-17 08:28:09', '2020-06-17 08:28:09'),
 (2, 'Movies', '2020-06-17 08:28:18', '2020-06-17 08:28:18');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `episodes`
+-- Table structure for table `Episodes`
 --
 
-CREATE TABLE `episodes` (
+CREATE TABLE `Episodes` (
   `id` int(11) NOT NULL,
   `filmId` int(11) NOT NULL,
   `title` varchar(255) DEFAULT NULL,
@@ -60,10 +59,10 @@ CREATE TABLE `episodes` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `episodes`
+-- Dumping data for table `Episodes`
 --
 
-INSERT INTO `episodes` (`id`, `filmId`, `title`, `thumbnailFilm`, `linkFilm`, `createdAt`, `updatedAt`) VALUES
+INSERT INTO `Episodes` (`id`, `filmId`, `title`, `thumbnailFilm`, `linkFilm`, `createdAt`, `updatedAt`) VALUES
 (1, 1, 'The WItcher : Episode 1', 'https://i.pinimg.com/736x/52/cb/be/52cbbe56ed6c0d496aa8b4d036055632.jpg', 'https://www.youtube.com/watch?v=-sfZuonnKe8&list=PLkLimRXN6NKxqV5nLSOfBzt_T0LJy8JIg', '2020-06-17 08:43:19', '2020-06-19 08:22:30'),
 (2, 1, 'The WItcher : Episode 2', 'https://i.pinimg.com/736x/52/cb/be/52cbbe56ed6c0d496aa8b4d036055632.jpg', 'https://www.youtube.com/watch?v=cOXqqYT3zW4&list=PL0FHxKU3tEruAkG-Tmi1djx7cTcxXdg4f&index=23', '2020-06-19 07:38:46', '2020-06-19 08:22:50'),
 (3, 1, 'The WItcher : Episode 3', 'https://i.pinimg.com/736x/52/cb/be/52cbbe56ed6c0d496aa8b4d036055632.jpg', 'https://www.youtube.com/watch?v=TZ23SGe1O30&list=PL0FHxKU3tEruAkG-Tmi1djx7cTcxXdg4f&index=32', '2020-06-19 07:40:29', '2020-06-19 08:23:03'),
@@ -102,10 +101,10 @@ INSERT INTO `episodes` (`id`, `filmId`, `title`, `thumbnailFilm`, `linkFilm`, `c
 -- --------------------------------------------------------
 
 --
--- Table structure for table `films`
+-- Table structure for table `Films`
 --
 
-CREATE TABLE `films` (
+CREATE TABLE `Films` (
   `id` int(11) NOT NULL,
   `categoryId` int(11) NOT NULL,
   `title` varchar(255) DEFAULT NULL,
@@ -117,10 +116,10 @@ CREATE TABLE `films` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `films`
+-- Dumping data for table `Films`
 --
 
-INSERT INTO `films` (`id`, `categoryId`, `title`, `thumbnailFilm`, `year`, `description`, `createdAt`, `updatedAt`) VALUES
+INSERT INTO `Films` (`id`, `categoryId`, `title`, `thumbnailFilm`, `year`, `description`, `createdAt`, `updatedAt`) VALUES
 (1, 1, 'The Witcher', 'https://i.pinimg.com/736x/52/cb/be/52cbbe56ed6c0d496aa8b4d036055632.jpg', 2019, 'The witcher Geralt, a mutated monster hunter, struggles to find his place in a world in which people often prove more wicked than beasts.', '2020-06-17 08:37:14', '2020-06-17 08:37:14'),
 (2, 1, 'Persona 3 The Movie', 'https://static.zerochan.net/PERSONA3.THE.MOVIE.%E2%80%94%231.Spring.of.Birth%E2%80%94.full.1473421.jpg', 2016, 'Japanese animated film and the first installment in a film series based on the Persona 3 video game by Atlus. Directed by Noriaki Akitaya and written by Jun Kumagai, it is based on the original story by Atlus and distributed by Aniplex.', '2020-06-18 12:23:14', '2020-06-18 12:23:14'),
 (3, 1, 'Game Of Thrones', 'https://m.media-amazon.com/images/M/MV5BZWVjNDJlNzYtMDljNy00Nzc5LTk3YWYtYjNhNGRiZGQ0M2E1XkEyXkFqcGdeQXVyNzY4Njk5MTU@._V1_UY1200_CR113,0,630,1200_AL_.jpg', 2011, 'is an HBO series that tells the story of a medieval country\'s civil war. The series, which premiered in April 2011, is set on the fictional continents of Westeros and Essos in a world where seasons stretch on for years', '2020-06-18 12:25:34', '2020-06-18 12:25:34'),
@@ -161,10 +160,10 @@ INSERT INTO `sequelizemeta` (`name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `transactions`
+-- Table structure for table `Transactions`
 --
 
-CREATE TABLE `transactions` (
+CREATE TABLE `Transactions` (
   `id` int(11) NOT NULL,
   `userId` int(11) NOT NULL,
   `startDate` date DEFAULT NULL,
@@ -176,20 +175,20 @@ CREATE TABLE `transactions` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `transactions`
+-- Dumping data for table `Transactions`
 --
 
-INSERT INTO `transactions` (`id`, `userId`, `startDate`, `dueDate`, `attache`, `status`, `createdAt`, `updatedAt`) VALUES
+INSERT INTO `Transactions` (`id`, `userId`, `startDate`, `dueDate`, `attache`, `status`, `createdAt`, `updatedAt`) VALUES
 (1, 1, '2020-06-17', '2020-08-03', '1592383596102-bca.JPG', 'approved', '2020-06-17 08:46:36', '2020-07-04 07:45:28'),
 (2, 2, '2020-06-21', '2020-08-03', '1592719765180-bri.jpg', 'approved', '2020-06-21 06:09:25', '2020-07-04 07:45:34');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Table structure for table `Users`
 --
 
-CREATE TABLE `users` (
+CREATE TABLE `Users` (
   `id` int(11) NOT NULL,
   `fullName` varchar(255) DEFAULT NULL,
   `email` varchar(255) DEFAULT NULL,
@@ -204,10 +203,10 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `users`
+-- Dumping data for table `Users`
 --
 
-INSERT INTO `users` (`id`, `fullName`, `email`, `password`, `gender`, `phone`, `address`, `subscribe`, `role`, `createdAt`, `updatedAt`) VALUES
+INSERT INTO `Users` (`id`, `fullName`, `email`, `password`, `gender`, `phone`, `address`, `subscribe`, `role`, `createdAt`, `updatedAt`) VALUES
 (1, 'Muhammad Rizki Akbar', 'rizkyakbar1511@gmail.com', '$2b$10$VL62j/2sfRH5aeAqKMcKPOKzbwHYA6DJ7udojdjKjg3IxWxv6wTJ.', 'male', '083802595929', 'Jl.Sako Baru, Perum. Alam Sako Blok A11', 1, 1, '2020-06-17 08:18:23', '2020-07-04 07:45:28'),
 (2, 'Deni Arman', 'deni@dumbflix.com', '$2b$10$ca38nN0qTos.RbqxixJZd.Zg3JN/NT5NEtlliCAHuO/bdpzwAE7X2', 'male', '0812345678901', 'Jl.11 Ulu Ampera, Palembang', 1, 0, '2020-06-17 08:26:51', '2020-07-04 07:45:34'),
 (17, 'M Iqbal Alexander', 'iqbal@dumbflix.com', '$2b$10$1u8nSfp4btpY70moiio1xeAbkHQImizyANOTfJHUGYxlALbBtRFMm', 'male', '081273294728', 'Jl. Kenten Azhar No. 10', 0, 0, '2020-07-03 05:03:16', '2020-07-03 05:03:16'),
@@ -219,22 +218,22 @@ INSERT INTO `users` (`id`, `fullName`, `email`, `password`, `gender`, `phone`, `
 --
 
 --
--- Indexes for table `categories`
+-- Indexes for table `Categories`
 --
-ALTER TABLE `categories`
+ALTER TABLE `Categories`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `episodes`
+-- Indexes for table `Episodes`
 --
-ALTER TABLE `episodes`
+ALTER TABLE `Episodes`
   ADD PRIMARY KEY (`id`),
   ADD KEY `filmId` (`filmId`);
 
 --
--- Indexes for table `films`
+-- Indexes for table `Films`
 --
-ALTER TABLE `films`
+ALTER TABLE `Films`
   ADD PRIMARY KEY (`id`),
   ADD KEY `categoryId` (`categoryId`);
 
@@ -246,16 +245,16 @@ ALTER TABLE `sequelizemeta`
   ADD UNIQUE KEY `name` (`name`);
 
 --
--- Indexes for table `transactions`
+-- Indexes for table `Transactions`
 --
-ALTER TABLE `transactions`
+ALTER TABLE `Transactions`
   ADD PRIMARY KEY (`id`),
   ADD KEY `userId` (`userId`);
 
 --
--- Indexes for table `users`
+-- Indexes for table `Users`
 --
-ALTER TABLE `users`
+ALTER TABLE `Users`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -263,33 +262,33 @@ ALTER TABLE `users`
 --
 
 --
--- AUTO_INCREMENT for table `categories`
+-- AUTO_INCREMENT for table `Categories`
 --
-ALTER TABLE `categories`
+ALTER TABLE `Categories`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `episodes`
+-- AUTO_INCREMENT for table `Episodes`
 --
-ALTER TABLE `episodes`
+ALTER TABLE `Episodes`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 
 --
--- AUTO_INCREMENT for table `films`
+-- AUTO_INCREMENT for table `Films`
 --
-ALTER TABLE `films`
+ALTER TABLE `Films`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
--- AUTO_INCREMENT for table `transactions`
+-- AUTO_INCREMENT for table `Transactions`
 --
-ALTER TABLE `transactions`
+ALTER TABLE `Transactions`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `users`
+-- AUTO_INCREMENT for table `Users`
 --
-ALTER TABLE `users`
+ALTER TABLE `Users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
@@ -297,22 +296,22 @@ ALTER TABLE `users`
 --
 
 --
--- Constraints for table `episodes`
+-- Constraints for table `Episodes`
 --
-ALTER TABLE `episodes`
-  ADD CONSTRAINT `episodes_ibfk_1` FOREIGN KEY (`filmId`) REFERENCES `films` (`id`);
+ALTER TABLE `Episodes`
+  ADD CONSTRAINT `Episodes_ibfk_1` FOREIGN KEY (`filmId`) REFERENCES `Films` (`id`);
 
 --
--- Constraints for table `films`
+-- Constraints for table `Films`
 --
-ALTER TABLE `films`
-  ADD CONSTRAINT `films_ibfk_1` FOREIGN KEY (`categoryId`) REFERENCES `categories` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `Films`
+  ADD CONSTRAINT `Films_ibfk_1` FOREIGN KEY (`categoryId`) REFERENCES `Categories` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `transactions`
+-- Constraints for table `Transactions`
 --
-ALTER TABLE `transactions`
-  ADD CONSTRAINT `transactions_ibfk_1` FOREIGN KEY (`userId`) REFERENCES `users` (`id`);
+ALTER TABLE `Transactions`
+  ADD CONSTRAINT `Transactions_ibfk_1` FOREIGN KEY (`userId`) REFERENCES `Users` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
