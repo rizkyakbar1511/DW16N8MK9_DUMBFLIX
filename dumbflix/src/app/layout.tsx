@@ -3,6 +3,8 @@ import { Inter as FontSans } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import Navbar from "@/components/Navbar";
+import TanstackProvider from "@/components/providers/tanstack-provider";
+import ThemeProvider from "@/components/providers/theme-provider";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -21,9 +23,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn("min-h-screen bg-black font-sans antialiased", fontSans.variable)}>
-        <Navbar />
-        {children}
+      <body className={cn("min-h-screen bg-background font-sans antialiased", fontSans.variable)}>
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
+          <TanstackProvider>
+            <Navbar />
+            {children}
+          </TanstackProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

@@ -1,5 +1,6 @@
 import type { Config } from "tailwindcss";
 import { fontFamily } from "tailwindcss/defaultTheme";
+import { PluginAPI } from "tailwindcss/types/config";
 
 const config = {
   darkMode: ["class"],
@@ -19,6 +20,9 @@ const config = {
       },
     },
     extend: {
+      screens: {
+        xs: "575px",
+      },
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
       },
@@ -81,7 +85,25 @@ const config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-animate"),
+    function ({ addUtilities }: PluginAPI) {
+      addUtilities({
+        ".text-shadow-sm": {
+          textShadow: "1px 1px 2px rgba(0, 0, 0, 0.5)",
+        },
+        ".text-shadow-md": {
+          textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)",
+        },
+        ".text-shadow-lg": {
+          textShadow: "3px 3px 6px rgba(0, 0, 0, 0.5)",
+        },
+        ".text-shadow-xl": {
+          textShadow: "4px 4px 8px rgba(0, 0, 0, 0.5)",
+        },
+      });
+    },
+  ],
 } satisfies Config;
 
 export default config;
